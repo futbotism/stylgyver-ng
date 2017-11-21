@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 
 @Component({
   selector: 'sg-docs',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./docs.component.scss']
 })
 export class DocsComponent implements OnInit {
+  @HostBinding('class.page-container') true;
 
   constructor() { }
 

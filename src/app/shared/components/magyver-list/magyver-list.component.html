@@ -1,3 +1,12 @@
-<p>
-  magyver-list works!sss
-</p>
+<mat-card>
+  <mat-card-title>
+    {{activeMember.name}}
+  </mat-card-title>
+  <img mat-card-image [src]="activeMember.image">
+  <mat-card-content>
+    <p>{{activeMember.description}}</p>
+  </mat-card-content>
+</mat-card>
+
+<button  *ngFor="let member of castMembers" mat-button (click)="selectMemmber(member)">{{member.name}}</button>
+

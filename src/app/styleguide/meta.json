@@ -1,0 +1,142 @@
+{
+  "components": {
+    "menu": [
+      {
+        "title": "magyver-list",
+        "id": "magyverList"
+      }
+    ],
+    "meta": {
+      "magyverList": {
+        "id": "magyverList",
+        "title": "magyver-list",
+        "properties": [
+          {
+            "name": "castMembers",
+            "type": "CastMember[]",
+            "decorator": "Input"
+          },
+          {
+            "name": "OUTPUT_NAME",
+            "type": "OUTPUT_TYPE",
+            "decorator": "Output"
+          }
+        ],
+        "description": " This component will show cast members from magyver and information about * **Example usage**",
+        "health": {
+          "missingDescription": false,
+          "missingExample": false
+        },
+        "examples": [
+          "<sg-magyver-list\n       (itemClicked)=\"onItemSelected()\"\n       [castMembers]=\"list\">\n</sg-magyver-list>"
+        ]
+      }
+    }
+  },
+  "models": {
+    "menu": [
+      {
+        "title": "cast-member",
+        "id": "castMember"
+      }
+    ],
+    "meta": [
+      {
+        "id": "castMember",
+        "title": "cast-member",
+        "properties": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "image",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          }
+        ],
+        "description": " The Cast Member Interface provides information about a cast member tes",
+        "health": {
+          "missingDescription": false,
+          "missingProperties": false
+        }
+      }
+    ]
+  },
+  "pipes": {
+    "menu": [
+      {
+        "title": "magyverfy-string",
+        "id": "magyverfyString"
+      },
+      {
+        "title": "title-case",
+        "id": "titleCase"
+      }
+    ],
+    "meta": [
+      {
+        "id": "magyverfyString",
+        "title": "magyverfy-string",
+        "description": " The magyver pipe append 'magyver to given string",
+        "health": {
+          "missingDescription": false,
+          "missingExample": false
+        },
+        "examples": [
+          "<p>{{'hello | MagyverfyString}}</p>"
+        ]
+      },
+      {
+        "id": "titleCase",
+        "title": "title-case",
+        "description": " The title case pipe changes a word to upper case",
+        "health": {
+          "missingDescription": false,
+          "missingExample": false
+        },
+        "examples": [
+          "<p>{{'hello | PipeTransform}}</p>"
+        ]
+      }
+    ]
+  },
+  "directives": {
+    "menu": [
+      {
+        "title": "colorify",
+        "id": "colorify"
+      }
+    ],
+    "meta": [
+      {
+        "id": "colorify",
+        "title": "colorify",
+        "properties": [
+          {
+            "name": "selector",
+            "type": ""
+          },
+          {
+            "name": "color",
+            "type": "string",
+            "decorator": "Input"
+          },
+          {
+            "name": "_element",
+            "type": "ElementRef"
+          }
+        ],
+        "description": " This is a directive",
+        "health": {
+          "missingDescription": false,
+          "missingExample": true
+        },
+        "examples": []
+      }
+    ]
+  }
+}

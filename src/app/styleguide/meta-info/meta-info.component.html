@@ -1,0 +1,36 @@
+<h2 class="title">{{formatTitle(meta?.title)}}</h2>
+
+<!-- {{ *ngFor="let example of meta?.properties}} -->
+
+<mat-expansion-panel *ngIf="meta?.properties?.length > 0">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h4>Properties</h4>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="property" *ngFor="let property of meta?.properties">
+    <p>{{property.name}}</p>
+    <p>{{property.type}}</p>
+  </div>
+</mat-expansion-panel>
+
+<mat-expansion-panel *ngIf="meta?.examples?.length > 0">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h4>Examples</h4>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <pre *ngFor="let example of meta?.examples">{{example}}</pre>
+</mat-expansion-panel>
+
+<mat-expansion-panel *ngIf="meta?.description !== ''">
+  <mat-expansion-panel-header>
+    <h4>Description</h4>
+  </mat-expansion-panel-header>
+  <p>{{meta?.description}}</p>
+</mat-expansion-panel>
+
+<div *ngIf="instance?.children.length == 0">
+  <h3>Instance</h3>
+  <ng-content #instance select="[instance]"></ng-content>
+</div>

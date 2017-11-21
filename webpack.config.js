@@ -7,6 +7,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const postcssUrl = require('postcss-url');
 const cssnano = require('cssnano');
+// const StylgyverPlugin = require('stylgyver-webpack');
+const StylgyverPlugin = require('../stylgyver-webpack');
 
 const { NoEmitOnErrorsPlugin, SourceMapDevToolPlugin, NamedModulesPlugin } = require('webpack');
 const { NamedLazyChunksWebpackPlugin, BaseHrefWebpackPlugin } = require('@angular/cli/plugins/webpack');
@@ -450,6 +452,30 @@ module.exports = {
       "exclude": [],
       "tsConfigPath": "src/tsconfig.app.json",
       "skipCodeGeneration": true
+    }),
+    new StylgyverPlugin({
+      outputPath: './src/app/styleguide/meta.json',
+      sourceOptions: [{
+          parseType: 'component',
+          name: 'components',
+          path: 'src/app/shared/components'
+        },{
+          name: 'models',
+          parseType: 'model',
+          path: 'src/app/shared/models',
+          addMetaToArray: 'true'
+        },{
+          name: 'pipes',
+          parseType: 'pipe',
+          path: 'src/app/shared/pipes',
+          addMetaToArray: 'true'
+        },{
+          name: 'directives',
+          parseType: 'directive',
+          path: 'src/app/shared/directives',
+          addMetaToArray: 'true'
+        }
+      ]
     })
   ],
   "node": {
