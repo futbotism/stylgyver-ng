@@ -1,0 +1,46 @@
+@import '../../../assets/style/lib/main.scss';
+
+header {
+  height: 60vh;
+  width: 100%;
+  display: table;
+  position: relative;
+
+  h1 {
+    span {
+
+    }
+  }
+
+  div {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .left-shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba($red, 0.9);
+  }
+  .right-shade {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba($purple, 0.9);
+  }
+}
+
+section {
+  height: calc(40vh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
