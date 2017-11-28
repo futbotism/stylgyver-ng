@@ -1,26 +1,19 @@
-<mat-sidenav-container fxLayout="column" class="example-container">
+<div class="side-nav">
+  <mat-list>
+    <a mat-list-item routerLink="/styleguide/components">Components</a>
+    <a mat-list-item class="sub-item" *ngFor="let menuItem of styleguideMeta?.components?.menu" href="{{'/styleguide/components#' + menuItem.id}}">{{menuItem.title}}</a>
 
-  <mat-sidenav #sidenav mode="side" opened="false" class="example-sidenav">
-    <mat-list>
-      <a mat-list-item routerLink="/styleguide/components">Components</a>
-      <a mat-list-item class="sub-item" *ngFor="let menuItem of styleguideMeta?.components?.menu" href="{{'/styleguide/components#' + menuItem.id}}">{{menuItem.title}}</a>
+    <a mat-list-item routerLink="/styleguide/models">Models</a>
+    <a mat-list-item class="sub-item" *ngFor="let menuItem of styleguideMeta?.models?.menu" href="{{'/styleguide/models#' + menuItem.id}}">{{menuItem.title}}</a>
 
-      <a mat-list-item routerLink="/styleguide/models">Models</a>
-      <a mat-list-item class="sub-item" *ngFor="let menuItem of styleguideMeta?.models?.menu" href="{{'/styleguide/models#' + menuItem.id}}">{{menuItem.title}}</a>
+    <a mat-list-item routerLink="/styleguide/pipes">Pipes</a>
+    <a mat-list-item class="sub-item" *ngFor="let menuItem of styleguideMeta?.pipes?.menu" href="{{'/styleguide/pipes#' + menuItem.id}}">{{menuItem.title}}</a>
 
-      <a mat-list-item routerLink="/styleguide/pipes">Pipes</a>
-      <a mat-list-item *ngFor="let menuItem of styleguideMeta?.pipes?.menu" href="{{'/styleguide/pipes#' + menuItem.id}}">{{menuItem.title}}</a>
+    <a mat-list-item routerLink="/styleguide/directives">Directives</a>
+    <a mat-list-item class="sub-item" *ngFor="let menuItem of styleguideMeta?.directives?.menu" href="{{'/styleguide/directives#' + menuItem.id}}">{{menuItem.title}}</a>
+  </mat-list>
+</div>
 
-      <a mat-list-item routerLink="/styleguide/directives">Directives</a>
-      <a mat-list-item class="sub-item" *ngFor="let menuItem of styleguideMeta?.directives?.menu" href="{{'/styleguide/directives#' + menuItem.id}}">{{menuItem.title}}</a>
-    </mat-list>
-  </mat-sidenav>
-
-  <button type="button" mat-button (click)="sidenav.toggle()">
-    Open sidenav
-  </button>
-
-  <div class="example-sidenav-content">
-    <router-outlet></router-outlet>
-  </div>
-</mat-sidenav-container>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

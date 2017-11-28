@@ -1,0 +1,38 @@
+@import "../../../assets/style/lib/main.scss";
+
+%block {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.input {
+  background: rgba($red, 0.3);
+  @extend %block;
+}
+
+.output {
+  background: rgba($green, 0.3);
+  @extend %block;
+}
+
+.doc {
+  @extend %block;
+}
+
+table {
+
+  tr {
+
+    td {
+      padding: 5px;
+      border: solid 1px $black;
+      font-size: 12px;
+    }
+  }
+}
+
+section {
+  p {
+    margin-top: 0;
+  }
+}

@@ -21,11 +21,39 @@ import { Component, HostBinding, OnInit } from '@angular/core';
   ]
 })
 export class HomeComponent implements OnInit {
-  @HostBinding('class.page-container') true;
+  @HostBinding('class.page-container--column') true;
+  example1 = 'npm install stylgyver-webpack --save-dev';
+  example2 = `const StylgyverPlugin = require('../stylgyver-webpack');`;
+  example3 = `new StylgyverPlugin({
+    outputPath: './src/app/styleguide/meta.json',
+    sourceOptions: [{
+        parseType: 'component',
+        name: 'components',
+        path: 'src/app/shared/components'
+      },{
+        name: 'models',
+        parseType: 'model',
+        path: 'src/app/shared/models',
+        addMetaToArray: 'true'
+      },{
+        name: 'pipes',
+        parseType: 'pipe',
+        path: 'src/app/shared/pipes',
+        addMetaToArray: 'true'
+      },{
+        name: 'directives',
+        parseType: 'directive',
+        path: 'src/app/shared/directives',
+        addMetaToArray: 'true'
+      }
+    ]
+  })`;
+  example4 = `this.styleguideMeta = this.http.get('src/app/styleguide/meta.json').map(meta => meta.json());`;
 
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

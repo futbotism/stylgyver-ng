@@ -1,7 +1,5 @@
 <h2 class="title">{{formatTitle(meta?.title)}}</h2>
 
-<!-- {{ *ngFor="let example of meta?.properties}} -->
-
 <mat-expansion-panel *ngIf="meta?.properties?.length > 0">
   <mat-expansion-panel-header>
     <mat-panel-title>
@@ -33,4 +31,8 @@
 <div *ngIf="instance?.children.length == 0">
   <h3>Instance</h3>
   <ng-content #instance select="[instance]"></ng-content>
+</div>
+
+<div #example class="live-example" [class.showing]="example?.children.length">
+  <ng-content></ng-content>
 </div>

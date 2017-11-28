@@ -1,0 +1,30 @@
+.side-nav {
+  background: $purple;
+  width: 200px;
+
+  mat-list {
+    position: fixed;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+      color: $green;
+    }
+
+    &.sub-item {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+mat-sidenav-container {
+  height: 100%;
+}
+

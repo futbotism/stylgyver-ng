@@ -1,3 +1,97 @@
-<p>
-  docs works!
-</p>
+<div class="side-nav">
+  <mat-list>
+    <a mat-list-item href="/docs#options">Options</a>
+    <a mat-list-item href="/docs#sourceOption">sourceOption</a>
+    <a mat-list-item href="/docs#metaObject">metaObject</a>
+    <a mat-list-item href="/docs#jsdoc">jsdoc</a>
+  </mat-list>
+</div>
+
+<div class="content">
+
+  <div class="input">
+
+    <section id="options">
+      <h2 class="title">Options</h2>
+      <p>The initial options passed into the plugin</p>
+
+      <div class="table">
+        <table>
+          <tr>
+            <td>Name</td>
+            <td>Type</td>
+            <td>Description</td>
+          </tr>
+          <tr *ngFor="let option of options">
+            <td>{{option.name}}</td>
+            <td>{{option.type}}</td>
+            <td>{{option.description}}</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="sourceOption">
+      <h2 class="title">SourceOption</h2>
+      <p>Options for each directory you would like to scan</p>
+
+      <div class="table">
+        <table>
+          <tr>
+            <td>Name</td>
+            <td>Type</td>
+            <td>Description</td>
+          </tr>
+          <tr *ngFor="let option of sourceOptions">
+            <td>{{option.name}}</td>
+            <td>{{option.type}}</td>
+            <td>{{option.description}}</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="output">
+
+    <section id="metaObject">
+      <h2 class="title">metaObject</h2>
+      <p>Options for each directory you would like to scan</p>
+
+      <div class="table">
+        <table>
+          <tr>
+            <td>Name</td>
+            <td>Type</td>
+            <td>Description</td>
+          </tr>
+          <tr *ngFor="let option of metaObjects">
+            <td>{{option.name}}</td>
+            <td>{{option.type}}</td>
+            <td>{{option.description}}</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="doc">
+
+    <section id="jsdoc">
+      <h2 class="title">Source Comments parser</h2>
+      <p>Example of a comment block you can place at the top of your file to parse your own comments into the styleguide</p>
+
+      <pre>
+    {{'...\r\n\r\n      \/**\r\n      * This component will show cast members from magyver and information about\r\n      * *\r\n      * **Example usage**\r\n      *\r\n      * ```html\r\n      * <sg-magyver-list\r\n      *        (itemClicked)=\"onItemSelected()\"\r\n      *        [castMembers]=\"list\">\r\n      * <\/sg-magyver-list>\r\n      * ```\r\n      *\r\n      * @export\r\n      * @class MagyverListComponent\r\n      * @Input castMembers\r\n      * @implements {OnInit}\r\n      *\/\r\n     @Component({\r\n       selector: \'sg-magyver-list\',\r\n       templateUrl: \'.\/magyver-list.component.html\',\r\n       styleUrls: [\'.\/magyver-list.component.scss\']\r\n     })\r\n     export class MagyverListComponent implements OnInit {\r\n\r\n      ...\r\n\r\n     };'}}
+    </pre>
+
+      <p>See the output
+        <a href="styleguide/components#magyverList">here</a>
+      </p>
+    </section>
+
+  </div>
+
+</div>

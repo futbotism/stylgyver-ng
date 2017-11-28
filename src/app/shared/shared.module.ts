@@ -11,7 +11,8 @@ import {
   MatSidenavModule,
   MatListModule,
   MatIconModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatTableModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -27,6 +28,7 @@ import { ColorifyDirective } from './directives/colorify.directive';
     MatListModule,
     MatSidenavModule,
     MatIconModule,
+    MatTableModule,
     MatExpansionModule,
     FlexLayoutModule
   ],
@@ -55,6 +57,7 @@ import { ColorifyDirective } from './directives/colorify.directive';
     MatToolbar,
     MatToolbarRow,
     MatIconModule,
+    MatTableModule,
     FlexLayoutModule,
     MagyverfyString,
     TitleCasePipe

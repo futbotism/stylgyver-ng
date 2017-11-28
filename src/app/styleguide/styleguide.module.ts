@@ -10,6 +10,7 @@ import { StyleguideComponent } from './styleguide/styleguide.component';
 import { StyleguideService } from './styleguide.service';
 import { PipesComponent } from './pipes/pipes.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,15 @@ import { DirectivesComponent } from './directives/directives.component';
     StyleguideRoutingModule,
     SharedModule
   ],
-  declarations: [StyleguideComponent, ModelsComponent, ComponentsComponent, MetaInfoComponent, PipesComponent, DirectivesComponent],
+  declarations: [
+    StyleguideComponent,
+    ModelsComponent,
+    ComponentsComponent,
+    MetaInfoComponent,
+    PipesComponent,
+    DirectivesComponent,
+    LandingComponent
+  ],
   providers: [
     StyleguideService
   ]
