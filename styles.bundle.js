@@ -8,7 +8,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nhtml {\n  margin: 0;\n  height: 100%; }\n\nbody {\n  margin: 0;\n  height: 100%; }\n\n.page-container {\n  display: block;\n  padding-top: 64px;\n  height: calc(100% - 64px);\n  width: 100%;\n  overflow-y: auto;\n  overflow-x: hidden; }\n\nh1, h2, h3, h4, h5, h6, p, a {\n  font-family: 'Quicksand', sans-serif; }\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nhtml {\n  margin: 0;\n  height: 100%; }\n\nbody {\n  margin: 0;\n  height: 100%; }\n\n.page-container, .page-container--column {\n  padding-top: 64px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  min-height: calc(100vh - 64px); }\n  .page-container--column {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column; }\n\nh1, h2, h3, h4, h5, h6, p, a, td {\n  font-family: 'Quicksand', sans-serif;\n  margin-bottom: 10px;\n  margin-top: 20px;\n  border-collapse: collapse; }\n", ""]);
 
 // exports
 

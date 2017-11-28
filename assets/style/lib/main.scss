@@ -1,1 +1,16 @@
 @import './variables.scss';
+@import './sidebar.scss';
+
+.content {
+  padding: $size-xl;
+  flex: 1;
+}
+
+h1, h2, h3, {
+  display: inline-block;
+  margin: 0;
+  padding: $size-s 0 0;
+  margin-bottom: $size-m;
+  border-bottom: solid 1px $red;
+  color: $black;
+}

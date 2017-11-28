@@ -75,8 +75,8 @@ var AppRoutingModule = (function () {
 }());
 AppRoutingModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */].forRoot(routes)],
-        exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */]]
+        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes)],
+        exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
     })
 ], AppRoutingModule);
 
@@ -99,7 +99,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".spacer {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 auto;\n          flex: 1 1 auto; }\n\n.mat-toolbar {\n  position: fixed;\n  background: #55595d; }\n", ""]);
+exports.push([module.i, ".side-nav {\n  background: #9068be;\n  width: 200px; }\n  .side-nav mat-list {\n    position: fixed; }\n  .side-nav a {\n    text-decoration: none;\n    color: #e1e8f0; }\n    .side-nav a:hover {\n      color: #6ed3cf; }\n    .side-nav a.sub-item {\n      display: none; }\n      .side-nav a.sub-item.active {\n        display: block; }\n\nmat-sidenav-container {\n  height: 100%; }\n\n.content {\n  padding: 30px;\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1; }\n\nh1, h2, h3 {\n  display: inline-block;\n  margin: 0;\n  padding: 5px 0 0;\n  margin-bottom: 10px;\n  border-bottom: solid 1px #e62739;\n  color: #55595d; }\n\n.spacer {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 auto;\n          flex: 1 1 auto; }\n\n.mat-toolbar {\n  position: fixed;\n  background: #55595d; }\n", ""]);
 
 // exports
 
@@ -449,6 +449,7 @@ SharedModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["h" /* MatListModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MatSidenavModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["g" /* MatIconModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MatTableModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["f" /* MatExpansionModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__["a" /* FlexLayoutModule */]
         ],
@@ -458,8 +459,8 @@ SharedModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["c" /* MatCardContent */],
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["d" /* MatCardSmImage */],
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["e" /* MatCardTitle */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MatToolbar */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MatToolbarRow */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MatToolbar */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MatToolbarRow */],
             __WEBPACK_IMPORTED_MODULE_5__pipes_magyverfy_string_pipe__["a" /* MagyverfyString */],
             __WEBPACK_IMPORTED_MODULE_6__shared_pipes_title_case_pipe__["a" /* TitleCasePipe */],
             __WEBPACK_IMPORTED_MODULE_7__directives_colorify_directive__["a" /* ColorifyDirective */],
@@ -474,9 +475,10 @@ SharedModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["e" /* MatCardTitle */],
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["h" /* MatListModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MatSidenavModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MatToolbar */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MatToolbarRow */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MatToolbar */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MatToolbarRow */],
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["g" /* MatIconModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MatTableModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_flex_layout__["a" /* FlexLayoutModule */],
             __WEBPACK_IMPORTED_MODULE_5__pipes_magyverfy_string_pipe__["a" /* MagyverfyString */],
             __WEBPACK_IMPORTED_MODULE_6__shared_pipes_title_case_pipe__["a" /* TitleCasePipe */]
