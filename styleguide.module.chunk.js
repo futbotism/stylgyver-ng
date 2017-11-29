@@ -645,7 +645,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var StyleguideService = (function () {
     function StyleguideService(http) {
         this.http = http;
-        this.styleguideMeta = this.http.get('/src/app/styleguide/meta.json').map(function (meta) { return meta.json(); });
+        this.styleguideMeta = this.http.get('https://futbotism.github.io/stylgyver-ng/assets/meta.json').map(function (meta) { return meta.json(); });
     }
     return StyleguideService;
 }());
